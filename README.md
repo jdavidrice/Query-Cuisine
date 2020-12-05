@@ -33,7 +33,7 @@ There is nothing to install to utilize this web app.
 
 ## Usage 
 
-Use this browser-based 
+Use this browser-based food app to find delicious recipes for the food that you already have in your fridge!
 
 * [Return to Top](#Query-Cuisine)
 
