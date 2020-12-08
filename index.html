@@ -19,7 +19,94 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
+
 <body>
-    
+    <!--Container-->
+    <div class="container small-container">
+        <header><h1 class="vertical-center">Query Cuisine</h1></header>
+
+        <!-- Select ingredient title-->
+        <h4 class="flex-small" id="ingredient-title">Choose your ingredients</h4>
+
+    <!--ingredient-selection container -->
+    <div class="ingredient-selection">
+
+    <!--Select Item #1-->
+    <select class="ingredient" id="item1">
+        <option disabled selected class="flex-small">Ingredient #1</option>
+            <option value="option-1">apples</option>
+            <option value="option-2">beef</option>
+    </select>
+
+    <!--Select Item #2-->
+    <select class="ingredient" id="item2">
+        <option disabled selected class="flex-small">Ingredient #2</option>
+        <option value="option-1">apples</option>
+        <option value="option-2">beef</option>
+    </select>
+    <!--Select Item #3-->
+    <select class="ingredient" id="item3">
+        <option disabled selected class="flex-small">Ingredient #3</option>
+        <option value="option-1">apples</option>
+        <option value="option-2">beef</option>
+    </select>
+
+    <!--Select Item #4-->
+    <select id="item4">
+        <div class="ingredient"></div>
+        <option disabled selected class="flex-large">Ingredient #4</option>
+        <option value="option-1">apples</option>
+        <option value="option-2">beef</option>
+    </select>
+
+    <!--Select Item #5-->
+    <select id="item5">
+        <div class="ingredient"></div>
+        <option disabled selected class="flex-small">Ingredient #5</option>
+        <option value="option-1">apples</option>
+        <option value="option-2">beef</option>
+    </select>
+
+
+    </div> <!--end of ingredient-selection class-->
+
+    <button class="submitBtn" type="submit" value="Submit">Submit</button>
+
+    <!--Recipe Suggestion title-->
+    <h4 id="suggestions-title">Suggested Recipes</h4>
+
+    <!--Recipe Suggestions container-->
+    <div class="suggestions-container">
+        <div class="recipe" id="recipe1">
+            <h4 class="recipe-titles"><a href="link-to-apple-pi-recipe.com/" target="_blank">Chicken Fajitas</a></h4>
+            <ul class="recipe-ingredients">
+                <li>Chicken</li>
+                <li>Peppers</li>
+                <li>Onions</li>
+                <li>Tortillas</li>
+            </ul>
+        </div>
+
+        <div class="recipe" id="recipe2">
+            <h4 class="recipe-titles"><a href="link-to-apple-pi-recipe.com/" target="_blank">Apple Pie</a></h4>
+            <ul class="recipe-ingredients">
+                <li>Flour</li>
+                <li>Apples</li>
+                <li>Sugar</li>
+                <li>Cinnamon</li>
+            </ul>
+
+        </div> <!--end of recipe class-->
+
+    </div> <!--end of recipe suggestions container-->
+
+
+    </div> <!--end of Container-->
+
+    <!--jQuery file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- External JavaScript file-->
+    <script src="assets/app.js"></script>
 </body>
 </html> 
