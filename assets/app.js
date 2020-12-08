@@ -2,7 +2,7 @@
 var ing = "",
 
 // Variable Declaration
-var searchIng = $("#search-ing");
+var searchRec = $("#search-recipe");
 var searchButton = $("#search-button");
 var inglist = [];
 
@@ -12,9 +12,9 @@ const APIkey = "2f3e7f513e714122ada8fe2295969951";
 // Function to display recipe
 function displayRecipe(event){
     event.preventDefault();
-    if(searchIng.val().trim()!==""){
-        ing = searchIng.val().trim();
-        getRecipe(ing);
+    if(searchRec.val().trim()!==""){
+        ing = searchRec.val().trim();
+        getRecipe(inglist);
     }
     
 }
