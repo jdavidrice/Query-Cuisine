@@ -109,4 +109,6 @@ textarea {
 li {
     font-size: 20px;
     line-height: 35px;
+.container {
+  text-align: center;
 }

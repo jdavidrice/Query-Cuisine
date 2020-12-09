@@ -2,17 +2,17 @@
 var ing = "",
 
 // Variable Declaration
-var searchRecipe = $("#search-recipe");
-var addIngredient = $("#add-ing");
+var searchRecipe = $("#search-recipe").val();
+var addIngredient = $("#add-ing").val();
 var ingList = [];
 
 // Setup API key
 const apiKey = "2f3e7f513e714122ada8fe2295969951";
-const apiUrl = "https://api.spoonacular.com/recipes/findByIngredients"
+const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${addIngredient}`;
 
 //Function to add ingredient
 function addIng(ing){
-    inglist.push(ing)
+    ingList.push(ing)
 
 }
 
@@ -20,7 +20,7 @@ function addIng(ing){
 function displayRecipe(event){
     event.preventDefault();
     if(ingList.length !== 0){
-        getRecipe(inglist);
+        getRecipe(ingList);
     }
     
 }
@@ -29,9 +29,9 @@ function displayRecipe(event){
 function getRecipe(ingList){
     // AJAX call
     $.ajax({
-        url:apiURL,
+        url:apiUrl,
         method:"GET",
     }).then(function(response){
-
+        console.log(response[i]);
     });
 }
