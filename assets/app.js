@@ -8,11 +8,11 @@ var ingList = [];
 
 // Setup API key
 const apiKey = "2f3e7f513e714122ada8fe2295969951";
-const apiUrl = "https://api.spoonacular.com/recipes/findByIngredients"
+const apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
 
 //Function to add ingredient
 function addIng(ing){
-    inglist.push(ing)
+    ingList.push(ing)
 
 }
 
@@ -20,7 +20,7 @@ function addIng(ing){
 function displayRecipe(event){
     event.preventDefault();
     if(ingList.length !== 0){
-        getRecipe(inglist);
+        getRecipe(ingList);
     }
     
 }
