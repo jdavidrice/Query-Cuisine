@@ -32,6 +32,6 @@ function getRecipe(ingList){
         url:apiUrl,
         method:"GET",
     }).then(function(response){
-        console.log(response[i]);
+        
     });
 }
