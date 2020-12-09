@@ -3,8 +3,8 @@ body {
     /* font-family: 'Open Sans', sans-serif; */
     font-size: 16px;
     line-height: 1;
-    
-    
+    background-color: rgb(165, 213, 235);
+    color: black;
 }
   
 .container {
@@ -43,15 +43,19 @@ h1 {
 }
 
 
-/* ingredient slection boxes */
-select {
-   border-radius: 0.25rem;
-   background-color: white;
-   margin-bottom: 30px;
-   
+/* ingredient selection boxes */
+textarea {
+    display: flex-box;
+    border-radius: 0.25rem;
+    background-color: white;
+    margin-bottom: 30px;
+    width: 50%;
 
 }
 
+.ingredient {
+    padding-bottom: 10px;
+}
 
 .submitBtn {
     margin: 2rem;
@@ -94,13 +98,14 @@ select {
    
   
 }
+
 #recipe2 {
     border: solid;
     padding-left: 15px;
     margin-bottom: 50px;
     background-color: white;
-
 }
+
 li {
     font-size: 20px;
     line-height: 35px;
