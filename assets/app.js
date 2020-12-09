@@ -2,29 +2,34 @@
 var ing = "",
 
 // Variable Declaration
-var searchRec = $("#search-recipe");
-var searchButton = $("#search-button");
-var inglist = [];
+var searchRecipe = $("#search-recipe");
+var addIngredient = $("#add-ing");
+var ingList = [];
 
 // Setup API key
-const APIkey = "2f3e7f513e714122ada8fe2295969951";
+const apiKey = "2f3e7f513e714122ada8fe2295969951";
+const apiUrl = "https://api.spoonacular.com/recipes/findByIngredients"
+
+//Function to add ingredient
+function addIng(ing){
+    inglist.push(ing)
+
+}
 
 // Function to display recipe
 function displayRecipe(event){
     event.preventDefault();
-    if(searchRec.val().trim()!==""){
-        ing = searchRec.val().trim();
+    if(ingList.length !== 0){
         getRecipe(inglist);
     }
     
 }
 
 // Function to get recipe using the ingredients
-function getRecipe(inglist){
+function getRecipe(ingList){
     // AJAX call
-    var queryURL =
     $.ajax({
-        url:queryURL,
+        url:apiURL,
         method:"GET",
     }).then(function(response){
 
