@@ -1,5 +1,5 @@
 // Declare a variable to store the searched ingredient
-var ing = "",
+var ing = "";
 
 // Variable Declaration
 var searchRecipe = $("#search-recipe").val();
@@ -32,6 +32,9 @@ function getRecipe(ingList){
         url:apiUrl,
         method:"GET",
     }).then(function(response){
+        console.log(response);
+        
         
     });
 }
+getRecipe();
