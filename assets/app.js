@@ -1,5 +1,5 @@
 // Declare a variable to store the searched ingredient
-var ing = "",
+var ing = "";
 
 // Variable Declaration
 var searchRecipe = $("#search-recipe").val();
