@@ -32,18 +32,6 @@ function getRecipe(ingList){
         url:apiUrl,
         method:"GET",
     }).then(function(response){
-        console.log(response);
-
-        
+        console.log(response[i]);
     });
 }
-
-// Event listeners
-$(document).ready(function(){
-
-    $("#search-recipe").click(function(){
-        return getRecipe();
-        
-    });
-
-});
