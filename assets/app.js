@@ -4,7 +4,9 @@ var ing = "";
 // Variable Declaration
 var searchRecipe = $("#search-recipe").val();
 var addIngredient = $("#add-ing").val();
-var ingList = [];
+var ingList = ["apples", "bread", "milk"];
+
+console.log(ingList)
 
 // Setup API key
 const apiKey = "2f3e7f513e714122ada8fe2295969951";
@@ -37,6 +39,9 @@ function getRecipe(ingList){
 }
 
 // Event listeners
-$("#search-recipe").click(function(){
+$("#search-recipe").click(function () {
+    console.log(getRecipe)
     return getRecipe();
 });
+
+getRecipe();

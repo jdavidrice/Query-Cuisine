@@ -9,6 +9,7 @@ body {
   
 .container {
     background-color: rgb(165, 213, 235);
+    /* text-align: center; */
 }
 /* Query Cuisine*/
 h1 {
@@ -109,6 +110,4 @@ textarea {
 li {
     font-size: 20px;
     line-height: 35px;
-.container {
-  text-align: center;
 }
