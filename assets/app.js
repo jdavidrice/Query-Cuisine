@@ -33,8 +33,17 @@ function getRecipe(ingList){
         method:"GET",
     }).then(function(response){
         console.log(response);
-        
+
         
     });
 }
-getRecipe();
+
+// Event listeners
+$(document).ready(function(){
+
+    $("#search-recipe").click(function(){
+        return getRecipe();
+        
+    });
+
+});
