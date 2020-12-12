@@ -57,7 +57,6 @@ function getRecipe(){
         // var missedIngredients = [(response[0].missedIngredients[0].name), (response[1].missedIngredients[0].name)];
 
         
-        
         // displaying missedIngredients
         $(".recipe1-ingredients").html("<li>" + 
         response[0].missedIngredients[0].name + "</li>" +
