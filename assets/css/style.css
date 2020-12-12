@@ -1,6 +1,5 @@
 
 body {
-    /* font-family: 'Open Sans', sans-serif; */
     font-size: 16px;
     line-height: 1;
     background-color: rgb(165, 213, 235);
@@ -8,8 +7,10 @@ body {
 }
   
 .container {
+    text-align: center;
     background-color: rgb(165, 213, 235);
 }
+
 /* Query Cuisine*/
 h1 {
     font-size: 4em;
@@ -26,29 +27,24 @@ h1 {
     padding-top: 30px;
     padding-bottom: 20px;
 }
-
   
-
-  
-/* container of dropdown lists*/
+/* container of textareas*/
 .ingredient-selection {
-    /* background-color: rgb(252, 227, 130); */
     text-align: flex;
     width: auto;
     padding-top: 10px;
     padding-left: 2rem;
-    padding-right:2rem;
+    padding-right: 2rem;
     padding-bottom: 10px;
-    
 }
-
 
 /* ingredient selection boxes */
 textarea {
-    display: flex-box;
+    display: inline-block;
+    resize:none;
     border-radius: 0.25rem;
     background-color: white;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     width: 50%;
 
 }
@@ -61,7 +57,6 @@ textarea {
     margin: 2rem;
     margin-top: -10px;
 }
-
 
 /* Suggested Recipes title */
 #suggestions-title {
@@ -79,24 +74,18 @@ textarea {
     padding-left: 2rem;
     padding-right:2rem;
     padding-bottom: 10px;
-
 }
 
 .recipe-titles {
     font-family: 'Courier New', Courier, monospace;
     padding-left: 20px;
-    /* font-size: 20px; */
-    
 }
-
 
 #recipe1 {
    border: solid;
    padding-left: 15px;
    margin-bottom: 50px;
    background-color: white;
-   
-  
 }
 
 #recipe2 {
@@ -109,6 +98,8 @@ textarea {
 li {
     font-size: 20px;
     line-height: 35px;
-.container {
-  text-align: center;
+}
+
+::placeholder {
+    color: lightgray
 }
