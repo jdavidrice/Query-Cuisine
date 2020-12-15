@@ -66,29 +66,23 @@ function getRecipe() {
 
             recipeDiv.append('<img src="' + response[i].image + '" />')
 
-            //$("#recipe1-title").text(response[i].title);
+            // for loop to get ingredients from recipe1 ...?
             recipeDiv.append("<ul>")
             for (var k = 0; k < response[i].usedIngredients.length; k++) {
-                // // displaying usedIngredients
+                
+                // // ORIGINAL displaying usedIngredients
                 // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
 
                  // displaying usedIngredients
                  recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>" + "<li>" + response[i].missedIngredients[k].originalString + "</li>")
-
-                // in ^ don't need ' -- ' + response[i].usedIngredients[k].originalName ). Need missedIngredients added. // displaying usedIngredients
-                // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
             }
+
+            // for loop for second recipe? right now it's displaying the same recipe twice
+
             recipeDiv.append("</ul>")
             $('#recipeCards').append(recipeDiv);
         }
-
-
-
-        // displaying usedIngredients
-        //$(".recipe1-ingredients").append("<li>" + response[0].usedIngredients[0].name + "</li>" + "</li>" + response[0].usedIngredients[1].name + "</li>");
-
-        // display quantities of ingredients
-        // response[0].missedIngredients[0].metaInformation.unitShort  
+  
 
     });
 }
