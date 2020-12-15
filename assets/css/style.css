@@ -1,4 +1,8 @@
+/* for ingredient list,
+text-align: left 
 
+image, text-align: right
+*/
 
 body {
     font-size: 16px;
@@ -68,8 +72,13 @@ textarea {
     padding-bottom: 2rem;;
 }
 
+.recipe-titles {
+    /* font-family: 'Courier New', Courier, monospace; */
+    padding-left: 20px;
+}
+
 .suggestions-container {
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     text-align: flex;
     width: auto;
     padding-left: 2rem;
@@ -77,17 +86,13 @@ textarea {
     padding-bottom: 10px;
 }
 
-.recipe-titles {
-    font-family: 'Courier New', Courier, monospace;
-    padding-left: 20px;
-}
 
-#recipe1 {
+/* #recipe1 {
    border: solid;
    padding-left: 15px;
    margin-bottom: 50px;
    background-color: white;
-}
+} */
 
 .recipe {
     border: solid;
@@ -96,16 +101,20 @@ textarea {
     background-color: white;
  }
 
-#recipe2 {
+/* #recipe2 {
     border: solid;
     padding-left: 15px;
     margin-bottom: 50px;
     background-color: white;
-}
+} */
 
 li {
+    text-align: left;
+    letter-spacing: normal;
     font-size: 20px;
     line-height: 35px;
+    margin: 25px;
+    
 }
 
 ::placeholder {

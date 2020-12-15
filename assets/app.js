@@ -69,8 +69,14 @@ function getRecipe() {
             //$("#recipe1-title").text(response[i].title);
             recipeDiv.append("<ul>")
             for (var k = 0; k < response[i].usedIngredients.length; k++) {
-                // displaying usedIngredients
-                recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
+                // // displaying usedIngredients
+                // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
+
+                 // displaying usedIngredients
+                 recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>" + "<li>" + response[i].missedIngredients[k].originalString + "</li>")
+
+                // in ^ don't need ' -- ' + response[i].usedIngredients[k].originalName ). Need missedIngredients added. // displaying usedIngredients
+                // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
             }
             recipeDiv.append("</ul>")
             $('#recipeCards').append(recipeDiv);
