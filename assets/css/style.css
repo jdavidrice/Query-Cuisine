@@ -108,6 +108,16 @@ textarea {
     background-color: white;
 } */
 
+.instructions {
+    text-align: right;
+    color: red;
+}
+
+ol {
+    text-align: right;
+    color: red;
+}
+
 li {
     text-align: left;
     letter-spacing: normal;
