@@ -90,15 +90,25 @@ function getInstructions(recipeId) {
 
         var instructionsDiv = $(`<div class="instructions">`)
 
-        instructionsDiv.append("<h5> Instructions </h5>");
+        // instructionsDiv.append("<h5> Instructions </h5>");
+        var olEl = $("<ol id='problem'>")
+        instructionsDiv.append(olEl); //+ instructions[0].steps.length
 
-        instructionsDiv.append("<ol>" + instructions[0].steps.length);
 
-        for (var j = 0; j < instructions[0].steps.length; j++);
+        console.log("steps", typeof instructions[0].steps[0].step);
 
-        instructionsDiv.append("<li>" + instructions[0].steps[j].step + "</li>");
+        for (var j = 0; j < instructions[0].steps.length; j++) {
 
-        instructionsDiv.append("</ol>");
+            // somehow this bad boy made it display in browser and in console!
+            console.log(j);
+
+            var problem = $("<li>")
+            problem.text(instructions[0].steps[j].step);
+            olEl.append(problem);
+        }
+        // instructionsDiv.append("<li>" + instructions[0].steps[j].step + "</li>");
+
+        // instructionsDiv.append("</ol>");
         $('#recipeCards').append(instructionsDiv);
 
 
