@@ -19,7 +19,7 @@ var addIngredient = $("#add-ing").val();
 
 // Setup API key
 var APIKey = "2f3e7f513e714122ada8fe2295969951";
-var queryURL = 'https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2';
+var queryURL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + APIKey + "&ingredients=" + ingredientList + "&number=2";
 
 
 // console.log(queryURL);
@@ -69,12 +69,16 @@ function getRecipe() {
             // for loop to get ingredients from recipe1 ...?
             recipeDiv.append("<ul>")
             for (var k = 0; k < response[i].usedIngredients.length; k++) {
-                
+
+                console.log(i);
+                console.log(k);
                 // // ORIGINAL displaying usedIngredients
                 // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
 
                  // displaying usedIngredients
                  recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>" + "<li>" + response[i].missedIngredients[k].originalString + "</li>")
+
+
             }
 
             // for loop for second recipe? right now it's displaying the same recipe twice
@@ -99,14 +103,23 @@ $("#search-recipe").click(function () {
     var item3 = $("#item3").val().trim();
     var item4 = $("#item4").val().trim();
     var item5 = $("#item5").val().trim();
+    var ingredientTemp = [item1, item2, item3, item4, item5];
     ingredientList = [];
 
     // loop through ingredientTemp, if ingredient entered add to ingredientList array
-    ingredientList.push(item1);
-    ingredientList.push(item2);
-    ingredientList.push(item3);
-    ingredientList.push(item4);
-    ingredientList.push(item5);
+    for (i=0; i<=4; i++) {
+        if(ingredientTemp[i] != ""){
+        ingredientList.push(ingredientTemp[i])
+        }
+    }
+    
+
+    // loop through ingredientTemp, if ingredient entered add to ingredientList array
+    // ingredientList.push(item1);
+    // ingredientList.push(item2);
+    // ingredientList.push(item3);
+    // ingredientList.push(item4);
+    // ingredientList.push(item5);
 
     // ingredientList = [item1, item2, item3, item4, item5];
 
