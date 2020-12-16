@@ -64,14 +64,47 @@ function getRecipe() {
 
             recipeDiv.append("</ul>")
             $('#recipeCards').append(recipeDiv);
+
+            getInstructions(response[i].id);
         }
 
-        // function getInstructions() {
+
 
         // }
 
     });
-}
+
+} // end of getRecipe function
+
+function getInstructions(recipeId) {
+    // var recipeId = response[i].id
+    var how2URL = `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${APIKey}`;
+    console.log(how2URL);
+
+    $.ajax({
+        url: how2URL,
+        method: "GET"
+
+    }).then(function (instructions) {
+        console.log(instructions)
+
+        var instructionsDiv = $(`<div class="instructions">`)
+
+        instructionsDiv.append("<h5> Instructions </h5>");
+
+        instructionsDiv.append("<ol>" + instructions[0].steps.length);
+
+        for (var j = 0; j < instructions[0].steps.length; j++);
+
+        instructionsDiv.append("<li>" + instructions[0].steps[j].step + "</li>");
+
+        instructionsDiv.append("</ol>");
+        $('#recipeCards').append(instructionsDiv);
+
+
+    })
+}; // end of getInstructions function
+
 // calling getRecipe function
 // getRecipe();
 
@@ -103,5 +136,3 @@ $("#search-recipe").click(function () {
     // getRecipe each time click submit button
     getRecipe();
 });
-
-
