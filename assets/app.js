@@ -18,21 +18,9 @@ var addIngredient = $("#add-ing").val();
 // console.log(ingredientList);
 
 // Setup API key
-var APIKey = "2f3e7f513e714122ada8fe2295969951";
+var APIKey = "cadebde4223d47aba1fca1df13e51294";
+// var APIKey = "2f3e7f513e714122ada8fe2295969951"; Cris's key
 var queryURL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + APIKey + "&ingredients=" + ingredientList + "&number=2";
-
-
-// console.log(queryURL);
-
-// // Function to display recipe
-// function displayRecipe(event){
-//     event.preventDefault();
-//     if(ingredientList.length !== 0){
-//         getRecipe(ingredientList);
-//     }
-
-// }
-
 
 
 // Function to get recipe using the ingredients ingredientList
@@ -49,19 +37,10 @@ function getRecipe() {
         // log the queryURL 
         console.log(response);
 
-        // transfer recipe title content to HTML
-        //$("#recipe1-title").text(response[0].title);
-        //console.log(response[0].title)
-
-
-        // var missedIngredients = [(response[0].missedIngredients[0].name), (response[1].missedIngredients[0].name)];
-
-
-
-        //$(".recipe1-ingredients").html("<li>" + response[0].missedIngredients[0].name + "</li>" + "<li>" + response[0].missedIngredients[1].name + "</li>")
+        // for loop to display recipe ingredients, img, title
         for (var i = 0; i < response.length; i++) {
             var recipeDiv = $('<div class="recipe">')
-            
+
             recipeDiv.append("<h4>" + response[i].title + "</h4>")
 
             recipeDiv.append('<img src="' + response[i].image + '" />')
@@ -72,21 +51,24 @@ function getRecipe() {
 
                 console.log(i);
                 console.log(k);
-                // // ORIGINAL displaying usedIngredients
-                // recipeDiv.append("<li>" + response[i].usedIngredients[k].name + ' -- ' + response[i].usedIngredients[k].originalName + "</li>")
 
-                 // displaying usedIngredients
-                 recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>" + "<li>" + response[i].missedIngredients[k].originalString + "</li>")
-
-
+                // displaying usedIngredients
+                recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>")
             }
 
-            // for loop for second recipe? right now it's displaying the same recipe twice
+            for (var k = 0; k < response[i].missedIngredients.length; k++) {
+
+                // displaying missedIngredients
+                recipeDiv.append("<li>" + response[i].missedIngredients[k].originalString + "</li>")
+            }
 
             recipeDiv.append("</ul>")
             $('#recipeCards').append(recipeDiv);
         }
-  
+
+        // function getInstructions() {
+
+        // }
 
     });
 }
@@ -98,30 +80,20 @@ function getRecipe() {
 
 // Submit button clicked, what happens each time
 $("#search-recipe").click(function () {
-    var item1 = $("#item1").val().trim();
-    var item2 = $("#item2").val().trim();
-    var item3 = $("#item3").val().trim();
-    var item4 = $("#item4").val().trim();
-    var item5 = $("#item5").val().trim();
+    item1 = $("#item1").val().trim();
+    item2 = $("#item2").val().trim();
+    item3 = $("#item3").val().trim();
+    item4 = $("#item4").val().trim();
+    item5 = $("#item5").val().trim();
     var ingredientTemp = [item1, item2, item3, item4, item5];
-    ingredientList = [];
 
     // loop through ingredientTemp, if ingredient entered add to ingredientList array
-    for (i=0; i<=4; i++) {
-        if(ingredientTemp[i] != ""){
-        ingredientList.push(ingredientTemp[i])
+    for (i = 0; i <= 4; i++) {
+        if (ingredientTemp[i] != "") {
+            ingredientList.push(ingredientTemp[i])
         }
     }
-    
 
-    // loop through ingredientTemp, if ingredient entered add to ingredientList array
-    // ingredientList.push(item1);
-    // ingredientList.push(item2);
-    // ingredientList.push(item3);
-    // ingredientList.push(item4);
-    // ingredientList.push(item5);
-
-    // ingredientList = [item1, item2, item3, item4, item5];
 
     queryURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2`;
 
