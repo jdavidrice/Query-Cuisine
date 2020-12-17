@@ -99,7 +99,7 @@ function getInstructions(recipeId) {
 
         for (var j = 0; j < instructions[0].steps.length; j++) {
 
-            // somehow this bad boy made it display in browser and in console!
+            // somehow this bad boy made it display in browser and in!
             console.log(j);
 
             var problem = $("<li>")

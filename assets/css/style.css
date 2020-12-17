@@ -31,6 +31,8 @@ h1 {
     margin-left: 20px;
     padding-top: 30px;
     padding-bottom: 20px;
+    text-align: center;
+    padding-right: 45px;
 }
   
 /* container of textareas*/
@@ -72,6 +74,7 @@ textarea {
     padding-bottom: 2rem;;
 }
 
+
 .recipe-titles {
     /* font-family: 'Courier New', Courier, monospace; */
     padding-left: 20px;
@@ -86,6 +89,23 @@ textarea {
     padding-bottom: 10px;
 }
 
+/*recipe titles*/
+h4 {
+    
+    font-size: 30px;
+    letter-spacing: 2px;;
+    font-family: cursive;
+    text-align: center;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+img {
+    align-items: center;
+    padding-right: 40px;
+    /* border-radius: .5rem; */
+}
 
 /* #recipe1 {
    border: solid;
@@ -96,9 +116,10 @@ textarea {
 
 .recipe {
     border: solid;
-    padding-left: 15px;
+    padding-left: 45px;
     margin-bottom: 50px;
     background-color: white;
+    padding-bottom: 15px;
  }
 
 /* #recipe2 {
@@ -108,22 +129,37 @@ textarea {
     background-color: white;
 } */
 
-.instructions {
+/* .instructions {
     text-align: right;
-    color: red;
+    color: green;
+} */
+
+#problem {
+    background-color: white;
+    border: solid;
+    padding-left: 55px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+    
 }
 
-ol {
-    text-align: right;
-    color: red;
-}
+
+
+
 
 li {
     text-align: left;
     letter-spacing: normal;
     font-size: 20px;
     line-height: 35px;
-    margin: 25px;
+    margin: 5px;
+    padding: 10px;
+    /* padding-left: 25px;
+    padding-right: 25px; */
+    border: solid, black;
+    border-radius: 0.25rem;
     
 }
 
