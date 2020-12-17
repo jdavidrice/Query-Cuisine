@@ -10,18 +10,16 @@ A simple food app that allows users to search for recipes based on ingredients t
 
 * [Description](#Description)
 * [Table of Contents](#Table-of-Contents)
-* [Photo](#Photo)
+* [Photos](#Photos)
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [Credits](#Credits)
-* [License](#License)
-* [Badges](#Badges)
 * [Contributing](#Contributing)
-* [Tests](#Tests)
 
-## Photo
 
-![Screenshot of published website]()
+## Photos
+
+![Screenshot 1 of published website](assets/images/query_cuisine_pic_1.png)
+![Screenshot 2 of published website](assets/images/query_cuisine_pic_2.png)
 
 * [Return to Top](#Query-Cuisine)
 
@@ -34,25 +32,10 @@ There is nothing to install to utilize this web app.
 ## Usage 
 
 Use this browser-based food app to find delicious recipes for the food that you already have in your fridge!
+After navigating to the correct web address, enter up to five ingredients into the text areas under the "Choose your ingredients" heading, then click on "submit." Your recipe suggestions will appear under the "Suggested Recipes" heading. 
 
 * [Return to Top](#Query-Cuisine)
 
-## Credits
-
-
-* [Return to Top](#Query-Cuisine)
-
-## License
-
-No licenses used or implied 
-
-* [Return to Top](#Query-Cuisine)
-
-## Badges
-
-No badges 
-
-* [Return to Top](#Query-Cuisine)
 
 ## Contributing
 
@@ -60,8 +43,3 @@ Paul Jakubowski, Jeremy Rice, Dana Smooke, Cris Franco
 
 * [Return to Top](#Query-Cuisine)
 
-## Tests
-
-No tests
-
-* [Return to Top](#Query-Cuisine)

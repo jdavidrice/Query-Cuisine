@@ -10,12 +10,6 @@ var ingredientList = [];
 
 console.log(ingredientList);
 
-// Variable Declaration
-var searchRecipe = $("#search-recipe").val();
-var addIngredient = $("#add-ing").val();
-
-
-// console.log(ingredientList);
 
 // Setup API key
 var APIKey = "cadebde4223d47aba1fca1df13e51294";
@@ -63,7 +57,6 @@ function getRecipe() {
             }
 
             recipeDiv.append("</ul>")
-            //$('#recipeCards').append(recipeDiv);
 
             recipeDiv.append("<h4>Instructions</h4>")
 
@@ -72,16 +65,11 @@ function getRecipe() {
             $('#recipeCards').append(recipeDiv);
         }
 
-
-
-        // }
-
     });
 
 } // end of getRecipe function
 
 function getInstructions(recipeId, recipeDiv) {
-    // var recipeId = response[i].id
     var how2URL = `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${APIKey}`;
     console.log(how2URL);
 
@@ -90,41 +78,25 @@ function getInstructions(recipeId, recipeDiv) {
         method: "GET"
 
     }).then(function (instructions) {
-        console.log(instructions)
 
-        // var instructionsDiv = $(`<div class="instructions">`)
 
-        // instructionsDiv.append("<h5> Instructions </h5>");
         var olEl = $("<ol id='problem'>")
-        //instructionsDiv.append(olEl); //+ instructions[0].steps.length
 
-
-        console.log("steps", typeof instructions[0].steps[0].step);
 
         for (var j = 0; j < instructions[0].steps.length; j++) {
 
-            // somehow this bad boy made it display in browser and in!
-            console.log(j);
+            // console.log(j);
 
             var problem = $("<li>")
             problem.text(instructions[0].steps[j].step);
             olEl.append(problem);
         }
-        // instructionsDiv.append("<li>" + instructions[0].steps[j].step + "</li>");
 
-        // instructionsDiv.append("</ol>");
-        //$('#recipeCards').append(instructionsDiv);
-        //$('#recipeCards').append(olEl);
         recipeDiv.append(olEl);
 
     })
 }; // end of getInstructions function
 
-// calling getRecipe function
-// getRecipe();
-
-
-// Event listeners
 
 // Submit button clicked, what happens each time
 $("#search-recipe").click(function () {
