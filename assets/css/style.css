@@ -33,8 +33,8 @@ h1 {
 #ingredient-title {
     font-size: 2rem;
     margin-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     text-align: center;
     padding-right: 45px;
 }
@@ -91,6 +91,11 @@ textarea {
     padding-left: 2rem;
     padding-right:2rem;
     padding-bottom: 10px;
+}
+
+#fancySwirl {
+    width: 250px;
+    padding-right: 0px;
 }
 
 /*recipe titles*/
