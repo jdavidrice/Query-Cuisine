@@ -4,6 +4,10 @@ text-align: left
 image, text-align: right
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
 body {
     font-size: 16px;
     line-height: 1;
@@ -94,11 +98,11 @@ h4 {
     
     font-size: 30px;
     letter-spacing: 2px;;
-    font-family: cursive;
+    font-family: "Dancing Script", cursive;
     text-align: center;
     padding-right: 40px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 img {
@@ -117,9 +121,10 @@ img {
 .recipe {
     border: solid;
     padding-left: 45px;
+    padding-right: 45px;
     margin-bottom: 50px;
     background-color: white;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
  }
 
 /* #recipe2 {
@@ -136,23 +141,21 @@ img {
 
 #problem {
     background-color: white;
-    border: solid;
-    padding-left: 55px;
-    padding-right: 35px;
+    /*border: solid;*/
+    padding-left: 31px;
+    padding-right: 5px;
     padding-bottom: 20px;
     padding-top: 20px;
     
     
 }
 
-
-
-
-
 li {
     text-align: left;
     letter-spacing: normal;
     font-size: 20px;
+    font-family:"Source Serif Pro", Arial, Helvetica, sans-serif ;
+    font-weight: bold;
     line-height: 35px;
     margin: 5px;
     padding: 10px;

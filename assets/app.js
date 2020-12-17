@@ -63,9 +63,13 @@ function getRecipe() {
             }
 
             recipeDiv.append("</ul>")
-            $('#recipeCards').append(recipeDiv);
+            //$('#recipeCards').append(recipeDiv);
 
-            getInstructions(response[i].id);
+            recipeDiv.append("<h4>Instructions</h4>")
+
+            getInstructions(response[i].id, recipeDiv);
+
+            $('#recipeCards').append(recipeDiv);
         }
 
 
@@ -76,7 +80,7 @@ function getRecipe() {
 
 } // end of getRecipe function
 
-function getInstructions(recipeId) {
+function getInstructions(recipeId, recipeDiv) {
     // var recipeId = response[i].id
     var how2URL = `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${APIKey}`;
     console.log(how2URL);
@@ -88,11 +92,11 @@ function getInstructions(recipeId) {
     }).then(function (instructions) {
         console.log(instructions)
 
-        var instructionsDiv = $(`<div class="instructions">`)
+        // var instructionsDiv = $(`<div class="instructions">`)
 
         // instructionsDiv.append("<h5> Instructions </h5>");
         var olEl = $("<ol id='problem'>")
-        instructionsDiv.append(olEl); //+ instructions[0].steps.length
+        //instructionsDiv.append(olEl); //+ instructions[0].steps.length
 
 
         console.log("steps", typeof instructions[0].steps[0].step);
@@ -109,8 +113,9 @@ function getInstructions(recipeId) {
         // instructionsDiv.append("<li>" + instructions[0].steps[j].step + "</li>");
 
         // instructionsDiv.append("</ol>");
-        $('#recipeCards').append(instructionsDiv);
-
+        //$('#recipeCards').append(instructionsDiv);
+        //$('#recipeCards').append(olEl);
+        recipeDiv.append(olEl);
 
     })
 }; // end of getInstructions function
