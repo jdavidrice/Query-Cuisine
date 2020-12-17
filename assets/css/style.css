@@ -60,6 +60,17 @@ textarea {
 
 }
 
+@media only screen and (max-width: 600px) {
+  img {
+    width: 225px;
+    height: 150px;
+  }
+  #fancySwirl {
+    width: 200px;
+    height: 53px;
+  }
+}
+
 .ingredient {
     padding-bottom: 10px;
 }
