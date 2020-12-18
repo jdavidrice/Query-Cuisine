@@ -8,7 +8,7 @@ var item5 = $("#item5").val().trim();
 var ingredientList = [];
 
 
-console.log(ingredientList);
+// console.log(ingredientList);
 
 
 // Setup API key
@@ -43,8 +43,8 @@ function getRecipe() {
             recipeDiv.append("<ul>")
             for (var k = 0; k < response[i].usedIngredients.length; k++) {
 
-                console.log(i);
-                console.log(k);
+                // console.log(i);
+                // console.log(k);
 
                 // displaying usedIngredients
                 recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>")
@@ -64,10 +64,9 @@ function getRecipe() {
 
             $('#recipeCards').append(recipeDiv);
         }
-
     });
-
-} // end of getRecipe function
+}
+// end of getRecipe function
 
 function getInstructions(recipeId, recipeDiv) {
     var how2URL = `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${APIKey}`;
@@ -117,8 +116,8 @@ $("#search-recipe").click(function () {
 
     queryURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2`;
 
-    console.log(queryURL);
-    console.log(ingredientList);
+    // console.log(queryURL);
+    // console.log(ingredientList);
 
     // getRecipe each time click submit button
     getRecipe();
