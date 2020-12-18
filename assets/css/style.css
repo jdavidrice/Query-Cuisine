@@ -1,9 +1,3 @@
-/* for ingredient list,
-text-align: left 
-
-image, text-align: right
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
@@ -52,23 +46,10 @@ h1 {
 /* ingredient selection boxes */
 textarea {
     display: inline-block;
-    resize:none;
+    resize: none;
     border-radius: 0.25rem;
     background-color: white;
-    /*margin-bottom: 30px;*/
     width: 50%;
-
-}
-
-@media only screen and (max-width: 600px) {
-  img {
-    width: 225px;
-    height: 150px;
-  }
-  #fancySwirl {
-    width: 200px;
-    height: 53px;
-  }
 }
 
 .ingredient {
@@ -89,14 +70,11 @@ textarea {
     padding-bottom: 2rem;;
 }
 
-
 .recipe-titles {
-    /* font-family: 'Courier New', Courier, monospace; */
     padding-left: 20px;
 }
 
 .suggestions-container {
-    /* font-family: 'Courier New', Courier, monospace; */
     text-align: flex;
     width: auto;
     padding-left: 2rem;
@@ -127,13 +105,6 @@ img {
     /* border-radius: .5rem; */
 }
 
-/* #recipe1 {
-   border: solid;
-   padding-left: 15px;
-   margin-bottom: 50px;
-   background-color: white;
-} */
-
 .recipe {
     border: solid;
     padding-left: 45px;
@@ -143,27 +114,13 @@ img {
     padding-bottom: 5px;
  }
 
-/* #recipe2 {
-    border: solid;
-    padding-left: 15px;
-    margin-bottom: 50px;
-    background-color: white;
-} */
-
-/* .instructions {
-    text-align: right;
-    color: green;
-} */
-
 #problem {
     background-color: white;
     /*border: solid;*/
     padding-left: 31px;
     padding-right: 5px;
     padding-bottom: 20px;
-    padding-top: 20px;
-    
-    
+    padding-top: 20px;   
 }
 
 li {
@@ -184,4 +141,18 @@ li {
 
 ::placeholder {
     color: lightgray
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 225px;
+    height: 150px;
+  }
+  #fancySwirl {
+    width: 200px;
+    height: 53px;
+  }
+  textarea {
+    width: 100%
+  }
 }

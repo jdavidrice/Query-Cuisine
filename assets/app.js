@@ -14,7 +14,7 @@ console.log(ingredientList);
 // Setup API key
 var APIKey = "cadebde4223d47aba1fca1df13e51294";
 // var APIKey = "2f3e7f513e714122ada8fe2295969951"; Cris's key
-var queryURL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + APIKey + "&ingredients=" + ingredientList + "&number=2";
+var queryURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2`;
 
 
 // Function to get recipe using the ingredients ingredientList
