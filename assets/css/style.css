@@ -21,6 +21,7 @@ h4 {
     letter-spacing: 2px;;
     font-family: "Dancing Script", cursive;
     text-align: center;
+    margin: 24px 10px;
 }
 img {
     align-items: center;
@@ -114,7 +115,7 @@ textarea {
   }
   img {
     width: 225px;
-    height: 150px;
+    height: 167px;
   }
   textarea {
     width: 100%
