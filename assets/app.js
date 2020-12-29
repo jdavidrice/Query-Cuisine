@@ -5,8 +5,12 @@ var item3 = $("#item3").val().trim();
 var item4 = $("#item4").val().trim();
 var item5 = $("#item5").val().trim();
 
+
 var ingredientList = [];
 
+var currentRecipeIndex = 0;
+
+var allRecipes = [];
 
 // console.log(ingredientList);
 
@@ -30,43 +34,79 @@ function getRecipe() {
 
         // log the queryURL 
         console.log(response);
+        // buildRecipe(response[currentRecipeIndex]);
+        return response;
 
         // for loop to display recipe ingredients, img, title
-        for (var i = 0; i < response.length; i++) {
-            var recipeDiv = $('<div class="recipe">')
+        // for (var i = 0; i < response.length; i++) {
+        // var recipeDiv = $('<div class="recipe">')
 
-            recipeDiv.append("<h4>" + response[i].title + "</h4>")
+        // recipeDiv.append("<h4>" + response[i].title + "</h4>")
 
-            recipeDiv.append('<img src="' + response[i].image + '" />')
+        // recipeDiv.append('<img src="' + response[i].image + '" />')
 
-            // for loop to get ingredients from recipe1 ...?
-            recipeDiv.append("<ul>")
-            for (var k = 0; k < response[i].usedIngredients.length; k++) {
+        // // for loop to get ingredients from recipe1 ...?
+        // recipeDiv.append("<ul>")
+        // for (var k = 0; k < response[i].usedIngredients.length; k++) {
 
-                // console.log(i);
-                // console.log(k);
+        //     // console.log(i);
+        //     // console.log(k);
 
-                // displaying usedIngredients
-                recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>")
-            }
+        //     // displaying usedIngredients
+        //     recipeDiv.append("<li>" + response[i].usedIngredients[k].originalString + "</li>")
+        // }
 
-            for (var k = 0; k < response[i].missedIngredients.length; k++) {
+        // for (var k = 0; k < response[i].missedIngredients.length; k++) {
 
-                // displaying missedIngredients
-                recipeDiv.append("<li>" + response[i].missedIngredients[k].originalString + "</li>")
-            }
+        //     // displaying missedIngredients
+        //     recipeDiv.append("<li>" + response[i].missedIngredients[k].originalString + "</li>")
+        // }
 
-            recipeDiv.append("</ul>")
+        // recipeDiv.append("</ul>")
 
-            recipeDiv.append("<h4>Instructions</h4>")
+        // recipeDiv.append("<h4>Instructions</h4>")
 
-            getInstructions(response[i].id, recipeDiv);
+        // getInstructions(response[i].id, recipeDiv);
 
-            $('#recipeCards').append(recipeDiv);
-        }
+        // $('#recipeCards').append(recipeDiv);
+        // }
     });
 }
 // end of getRecipe function
+function buildRecipe(recipe) {
+    var recipeDiv = $('<div class="recipe">')
+
+    recipeDiv.append("<h4>" + recipe.title + "</h4>")
+
+    recipeDiv.append('<img src="' + recipe.image + '" />')
+
+    // for loop to get ingredients from recipe1 ...?
+    recipeDiv.append("<ul>")
+    for (var k = 0; k < recipe.usedIngredients.length; k++) {
+
+        // console.log(i);
+        // console.log(k);
+
+        // displaying usedIngredients
+        recipeDiv.append("<li>" + recipe.usedIngredients[k].originalString + "</li>")
+    }
+
+    for (var k = 0; k < recipe.missedIngredients.length; k++) {
+
+        // displaying missedIngredients
+        recipeDiv.append("<li>" + recipe.missedIngredients[k].originalString + "</li>")
+    }
+
+    recipeDiv.append("</ul>")
+
+    recipeDiv.append("<h4>Instructions</h4>")
+
+    getInstructions(recipe.id, recipeDiv);
+
+
+
+    $('#recipeCards').append(recipeDiv);
+}
 
 function getInstructions(recipeId, recipeDiv) {
     var how2URL = `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${APIKey}`;
@@ -92,10 +132,20 @@ function getInstructions(recipeId, recipeDiv) {
         }
 
         recipeDiv.append(olEl);
+        var previousButton = $("<button>").text("Previous");
+        previousButton.addClass("paginate");
+        recipeDiv.append(previousButton);
 
+        var nextButton = $("<button>").text("Next");
+        nextButton.addClass("paginate");
+        recipeDiv.append(nextButton);
     })
 }; // end of getInstructions function
-
+$(".paginate").on("click", function () {
+    var clicked = $(this).text()
+    if (clicked === "Next") {
+    }
+})
 
 // Submit button clicked, what happens each time
 $("#search-recipe").click(function () {
@@ -120,5 +170,5 @@ $("#search-recipe").click(function () {
     // console.log(ingredientList);
 
     // getRecipe each time click submit button
-    getRecipe();
+    allRecipes = getRecipe();
 });
