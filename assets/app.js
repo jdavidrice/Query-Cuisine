@@ -132,6 +132,7 @@ function getInstructions(recipeId, recipeDiv) {
         }
 
         recipeDiv.append(olEl);
+
         var previousButton = $("<button>").text("Previous");
         previousButton.addClass("paginate");
         recipeDiv.append(previousButton);
@@ -141,6 +142,8 @@ function getInstructions(recipeId, recipeDiv) {
         recipeDiv.append(nextButton);
     })
 }; // end of getInstructions function
+
+// Pagination
 $(".paginate").on("click", function () {
     var clicked = $(this).text()
     if (clicked === "Next") {
@@ -148,7 +151,7 @@ $(".paginate").on("click", function () {
 })
 
 // Submit button clicked, what happens each time
-$("#search-recipe").click(function () {
+$("#search-recipe").on("click", function () {
     item1 = $("#item1").val().trim();
     item2 = $("#item2").val().trim();
     item3 = $("#item3").val().trim();
