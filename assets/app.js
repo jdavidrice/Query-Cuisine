@@ -116,9 +116,6 @@ $("#search-recipe").click(function () {
 
     queryURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2`;
 
-    // console.log(queryURL);
-    // console.log(ingredientList);
-
     // getRecipe each time click submit button
     getRecipe();
 });
