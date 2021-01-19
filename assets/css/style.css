@@ -2,27 +2,33 @@ body {
   font-size: 16px;
   line-height: 1;
   background-color: rgb(165, 213, 235);
-  color: black
+  color: black;
+
 }
+
 /* Query Cuisine */
 h1 {
   font-size: 4em;
   font-family: 'Cormorant Garamond', serif;
   margin: 0.67em 0;
   text-align: center;
-  padding-top: 30px
+  padding-top: 30px;
+
 }
+
 /* recipe titles */
 h4 {
   font-size: 30px;
   letter-spacing: 2px;
   font-family: "Dancing Script", cursive;
   text-align: center;
-  margin: 24px 10px
+  margin: 24px 10px;
+
 }
 img {
   align-items: center;
-  border-radius: 0.5rem
+  border-radius: 0.5rem;
+
 }
 li {
   text-align: left;
@@ -34,20 +40,23 @@ li {
   margin: 5px;
   padding: 10px;
   border: solid, black;
-  border-radius: 0.25rem  
+  border-radius: 0.25rem;
+
 }
-  
+
 /* ingredient selection boxes */
 textarea {
   display: inline-block;
   resize: none;
   border-radius: 0.25rem;
   background-color: white;
-  width: 50%
+  width: 50%;
+
 }
 .container {
   text-align: center;
-  background-color: rgb(165, 213, 235)
+  background-color: rgb(165, 213, 235);
+
 }
 .ingredient {
   padding-bottom: 10px;
@@ -58,12 +67,14 @@ textarea {
   text-align: flex;
   width: auto;
   padding: 10px;
-  margin: 20px
+  margin: 20px;
+
 }
 .suggestions-container {
   text-align: flex;
   width: auto;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+
 }
 .recipe {
   border: solid;
@@ -71,7 +82,8 @@ textarea {
   padding-right: 45px;
   margin-bottom: 50px;
   background-color: white;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+
  }
 .recipe-titles {
   padding-left: 20px;
@@ -81,22 +93,26 @@ textarea {
   font-size: 2rem;
   margin: 25px;
   padding: 10px;
-  text-align: center
+  text-align: center;
+
 }
 /* Suggested Recipes title */
 #suggestions-title {
   font-size: 2rem;
   margin: 25px;
-  padding: 10px
+  padding: 10px;
+
 }
 #fancySwirl {
   width: 250px;
-  padding-right: 0px
+  padding-right: 0px;
+
 }
 #problem {
   background-color: white;
   padding: 20px;  
-  margin: 0px 10px 24px
+  margin: 0px 10px 24px;
+
 }
 ::placeholder {
   color: lightgray
@@ -114,17 +130,20 @@ textarea {
   }
   img {
     width: 225px;
-    height: 167px
+    height: 167px;
+
   }
   textarea {
-    width: 100%
+    width: 100%;
   }
   .recipe {
     margin: 0px; 
-    padding: 0px
+    padding: 0px;
+  
   }
   #fancySwirl {
     width: 200px;
-    height: 53px
+    height: 53px;
+
   }
 }
