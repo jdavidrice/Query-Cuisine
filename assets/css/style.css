@@ -3,7 +3,7 @@ body {
   line-height: 1;
   background-color: rgb(165, 213, 235);
   color: black;
-
+  
 }
 
 /* Query Cuisine */
@@ -105,13 +105,13 @@ textarea {
 }
 #fancySwirl {
   width: 250px;
-  padding-right: 0px;
+  padding-right: 0;
 
 }
 #problem {
   background-color: white;
   padding: 20px;  
-  margin: 0px 10px 24px;
+  margin: 0 10px 24px;
 
 }
 ::placeholder {
@@ -137,8 +137,8 @@ textarea {
     width: 100%;
   }
   .recipe {
-    margin: 0px; 
-    padding: 0px;
+    margin: 0; 
+    padding: 0;
   
   }
   #fancySwirl {
