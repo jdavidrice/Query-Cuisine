@@ -1,103 +1,105 @@
 body {
-    font-size: 16px;
-    line-height: 1;
-    background-color: rgb(165, 213, 235);
-    color: black;
+  font-size: 16px;
+  line-height: 1;
+  background-color: rgb(165, 213, 235);
+  color: black
 }
-/* Query Cuisine*/
+/* Query Cuisine */
 h1 {
-    font-size: 4em;
-    font-family: 'Cormorant Garamond', serif;
-    margin: 0.67em 0;
-    text-align: center;
-    padding-top: 30px;
+  font-size: 4em;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0.67em 0;
+  text-align: center;
+  padding-top: 30px
 }
-/*recipe titles*/
+/* recipe titles */
 h4 {
-    font-size: 30px;
-    letter-spacing: 2px;;
-    font-family: "Dancing Script", cursive;
-    text-align: center;
-    margin: 24px 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin: 24px 10px
 }
 img {
-    align-items: center;
-    border-radius: .5rem;
+  align-items: center;
+  border-radius: 0.5rem
 }
 li {
-    text-align: left;
-    letter-spacing: normal;
-    font-size: 20px;
-    font-family:"Source Serif Pro", Arial, Helvetica, sans-serif ;
-    font-weight: bold;
-    line-height: 35px;
-    margin: 5px;
-    padding: 10px;
-    border: solid, black;
-    border-radius: 0.25rem;  
-}  
+  text-align: left;
+  letter-spacing: normal;
+  font-size: 20px;
+  font-family: "Source Serif Pro", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 35px;
+  margin: 5px;
+  padding: 10px;
+  border: solid, black;
+  border-radius: 0.25rem  
+}
+  
 /* ingredient selection boxes */
 textarea {
-    display: inline-block;
-    resize: none;
-    border-radius: 0.25rem;
-    background-color: white;
-    width: 50%;
+  display: inline-block;
+  resize: none;
+  border-radius: 0.25rem;
+  background-color: white;
+  width: 50%
 }
 .container {
-    text-align: center;
-    background-color: rgb(165, 213, 235);
+  text-align: center;
+  background-color: rgb(165, 213, 235)
 }
 .ingredient {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
-/* container of textareas*/
+
+/* container of textareas */
 .ingredient-selection {
-    text-align: flex;
-    width: auto;
-    padding: 10px;
-    margin: 20px;
+  text-align: flex;
+  width: auto;
+  padding: 10px;
+  margin: 20px
 }
 .suggestions-container {
-    text-align: flex;
-    width: auto;
-    padding-bottom: 10px;
+  text-align: flex;
+  width: auto;
+  padding-bottom: 10px
 }
 .recipe {
-    border: solid;
-    padding-left: 45px;
-    padding-right: 45px;
-    margin-bottom: 50px;
-    background-color: white;
-    padding-bottom: 5px;
+  border: solid;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding-bottom: 5px
  }
 .recipe-titles {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 /* Choose your ingredients */
 #ingredient-title {
-    font-size: 2rem;
-    margin: 25px;
-    padding: 10px;
-    text-align: center;
+  font-size: 2rem;
+  margin: 25px;
+  padding: 10px;
+  text-align: center
 }
 /* Suggested Recipes title */
 #suggestions-title {
-    font-size: 2rem;
-    margin: 25px;
-    padding: 10px;
+  font-size: 2rem;
+  margin: 25px;
+  padding: 10px
 }
 #fancySwirl {
-    width: 250px;
-    padding-right: 0px;
+  width: 250px;
+  padding-right: 0px
 }
 #problem {
-    background-color: white;
-    padding: 20px;  
-    margin: 0px 10px 24px;
+  background-color: white;
+  padding: 20px;  
+  margin: 0px 10px 24px
 }
 ::placeholder {
-    color: lightgray
+  color: lightgray
 }
 /* Mobile Screens */
 @media only screen and (max-width: 600px) {
@@ -112,17 +114,17 @@ textarea {
   }
   img {
     width: 225px;
-    height: 167px;
+    height: 167px
   }
   textarea {
     width: 100%
   }
   .recipe {
     margin: 0px; 
-    padding: 0px;
+    padding: 0px
   }
   #fancySwirl {
     width: 200px;
-    height: 53px;
+    height: 53px
   }
 }
