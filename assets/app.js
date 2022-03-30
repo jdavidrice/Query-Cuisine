@@ -22,7 +22,6 @@ function getRecipe() {
     method: 'GET'
   }).then(function (response) {
     // for loop to display recipe ingredients, img, title
-    console.log('response:', response)
     for (let i = 0; i < response.length; i++) {
       var recipeDiv = $("<div class='recipe'>");
 
