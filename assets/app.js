@@ -20,11 +20,10 @@ function getRecipe() {
   $.ajax({
     url: queryURL,
     method: 'GET'
-
   }).then(function (response) {
-
     // for loop to display recipe ingredients, img, title
-      for (let i = 0; i < response.length; i++) {
+    console.log('response:', response)
+    for (let i = 0; i < response.length; i++) {
       var recipeDiv = $("<div class='recipe'>");
 
       recipeDiv.append(`<h4>${response[i].title}</h4>`);
@@ -34,13 +33,10 @@ function getRecipe() {
       // for loop to get ingredients from recipe1 ...?
       recipeDiv.append('<ul>');
       for (let k = 0; k < response[i].usedIngredients.length; k++) {
-
         // displaying usedIngredients
         recipeDiv.append(
-        `<li>
-            ${response[i].usedIngredients[k].amount}
-            ${response[i].usedIngredients[k].unit}
-            ${response[i].usedIngredients[k].name}
+          `<li>
+            ${response[i].usedIngredients[k].original}
         </li>`
         );
       }
@@ -48,10 +44,8 @@ function getRecipe() {
       for (let k = 0; k < response[i].missedIngredients.length; k++) {
         // displaying missedIngredients
         recipeDiv.append(
-        `<li>
-            ${response[i].missedIngredients[k].amount}
-            ${response[i].missedIngredients[k].unit}
-            ${response[i].missedIngredients[k].name}
+          `<li>
+            ${response[i].missedIngredients[k].original}
         </li>`
         );
       }
@@ -75,16 +69,21 @@ function getInstructions(recipeId, recipeDiv) {
     url: how2URL,
     method: 'GET'
   }).then(function (instructions) {
-    var olEl = $("<ol id='problem'>");
 
-    for (let j = 0; j < instructions[0].steps.length; j++) {
+    if (instructions == null) {
+      console.log("no instructions");
+    } else {
+      console.log("instructions present")
+      var olEl = $("<ol id='problem'>");
 
-      var problem = $('<li>');
-      problem.text(instructions[0].steps[j].step);
-      olEl.append(problem);
+      for (let j = 0; j < instructions[0].steps.length; j++) {
+        var problem = $('<li>');
+        problem.text(instructions[0].steps[j].step);
+        olEl.append(problem);
+      }
+
+      recipeDiv.append(olEl);
     }
-
-    recipeDiv.append(olEl);
   });
 } // end of getInstructions function
 
