@@ -1,113 +1,151 @@
-
 body {
-    /* font-family: 'Open Sans', sans-serif; */
-    font-size: 16px;
-    line-height: 1;
-    background-color: rgb(165, 213, 235);
-    color: black;
+  font-size: 16px;
+  line-height: 1;
+  background-color: rgb(165, 213, 235);
+  color: black;
 }
   
 .container {
     background-color: rgb(165, 213, 235);
     /* text-align: center; */
 }
-/* Query Cuisine*/
+
+/* Query Cuisine */
 h1 {
-    font-size: 4em;
-    font-family: 'Cormorant Garamond', serif;
-    margin: 0.67em 0;
-    text-align: center;
-    padding-top: 30px;
+  font-size: 4em;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0.67em 0;
+  text-align: center;
+  padding-top: 30px;
+
 }
 
-/* Choose your ingredients */
-#ingredient-title {
-    font-size: 2rem;
-    margin-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+/* recipe titles */
+h4 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin: 24px 10px;
+
 }
+img {
+  align-items: center;
+  border-radius: 0.5rem;
 
-  
-
-  
-/* container of dropdown lists*/
-.ingredient-selection {
-    /* background-color: rgb(252, 227, 130); */
-    text-align: flex;
-    width: auto;
-    padding-top: 10px;
-    padding-left: 2rem;
-    padding-right:2rem;
-    padding-bottom: 10px;
-    
 }
-
+li {
+  text-align: left;
+  letter-spacing: normal;
+  font-size: 20px;
+  font-family: "Source Serif Pro", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 35px;
+  margin: 5px;
+  padding: 10px;
+  border: solid, black;
+  border-radius: 0.25rem;
+}
 
 /* ingredient selection boxes */
 textarea {
-    display: flex-box;
-    border-radius: 0.25rem;
-    background-color: white;
-    margin-bottom: 30px;
-    width: 50%;
+  display: inline-block;
+  resize: none;
+  border-radius: 0.25rem;
+  background-color: white;
+  width: 50%;
 
 }
+.container {
+  text-align: center;
+  background-color: rgb(165, 213, 235);
 
+}
 .ingredient {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
-.submitBtn {
-    margin: 2rem;
-    margin-top: -10px;
+/* container of textareas */
+.ingredient-selection {
+  text-align: flex;
+  width: auto;
+  padding: 10px;
+  margin: 20px;
+
 }
+.suggestions-container {
+  text-align: flex;
+  width: auto;
+  padding-bottom: 10px;
 
+}
+.recipe {
+  border: solid;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding-bottom: 5px;
 
+ }
+.recipe-titles {
+  padding-left: 20px;
+}
+/* Choose your ingredients */
+#ingredient-title {
+  font-size: 2rem;
+  margin: 25px;
+  padding: 10px;
+  text-align: center;
+
+}
 /* Suggested Recipes title */
 #suggestions-title {
-    font-size: 2rem;
-    margin-left: 20px;
-    padding-top: 30px;
-    padding-left: 16px;
-    padding-bottom: 2rem;;
-}
-
-.suggestions-container {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: flex;
-    width: auto;
-    padding-left: 2rem;
-    padding-right:2rem;
-    padding-bottom: 10px;
+  font-size: 2rem;
+  margin: 25px;
+  padding: 10px;
 
 }
+#fancySwirl {
+  width: 250px;
+  padding-right: 0;
 
-.recipe-titles {
-    font-family: 'Courier New', Courier, monospace;
-    padding-left: 20px;
-    /* font-size: 20px; */
-    
 }
+#problem {
+  background-color: white;
+  padding: 20px;  
+  margin: 0 10px 24px;
 
+}
+::placeholder {
+  color: lightgray
+}
+/* Mobile Screens */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  li {
+    font-size: 17px;
+  }
+  img {
+    width: 225px;
+    height: 167px;
 
-#recipe1 {
-   border: solid;
-   padding-left: 15px;
-   margin-bottom: 50px;
-   background-color: white;
-   
+  }
+  textarea {
+    width: 100%;
+  }
+  .recipe {
+    margin: 0; 
+    padding: 0;
   
-}
-
-#recipe2 {
-    border: solid;
-    padding-left: 15px;
-    margin-bottom: 50px;
-    background-color: white;
-}
-
-li {
-    font-size: 20px;
-    line-height: 35px;
+  }
+  #fancySwirl {
+    width: 200px;
+    height: 53px;
+  }
 }

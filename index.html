@@ -5,84 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Query Cuisine</title>
-
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&family=Source+Serif+Pro:wght@300&display=swap"
+        rel="stylesheet">
     <!--Font Awesome Link-->
     <link rel="stylesheet" href="./assets/webfonts/fontawesome.min.css">
-
     <!--External CSS Stylesheets-->
     <link rel="stylesheet" href="./assets/css/primitive.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
-
 <body>
     <!--Container-->
     <div class="container small-container">
-        <header><h1 class="vertical-center">Query Cuisine</h1></header>
+        <header>
+            <h1 class="vertical-center">Query Cuisine</h1>
+        </header>
 
-        <!-- Select ingredient title-->
-        <h4 class="flex-small" id="ingredient-title">Choose your ingredients</h4>
+        <img src="assets/images/black-underline-swirl.png" alt="fancy swirl" id="fancySwirl">
 
-    <!--ingredient-selection container -->
-    <div class="ingredient-selection">
+        <!-- Select ingredient title -->
+        <h4 class="flex-small" id="ingredient-title">Choose Your Ingredients
+        </h4>
 
-        <!--Select Item #1-->
-        <textarea class="ingredient flex-small" id="item1" placeholder="ex. apples"></textarea>
+        <!--ingredient-selection container -->
+        <div class="ingredient-selection">
 
-        <!--Select Item #2-->
-        <textarea class="ingredient flex-small" id="item2" placeholder="ex. brie"></textarea>
+            <!--Select Item #1-->
+            <textarea class="ingredient flex-small" id="item1" placeholder="ex. apples"></textarea>
 
-        <!--Select Item #3-->
-        <textarea class="ingredient flex-small" id="item3" placeholder="ex. chicken"></textarea>
+            <!--Select Item #2-->
+            <textarea class="ingredient flex-small" id="item2" placeholder="ex. brie"></textarea>
 
-        <!--Select Item #4-->
-        <textarea class="ingredient flex-small" id="item4" placeholder="ex. dumplings"></textarea>
+            <!--Select Item #3-->
+            <textarea class="ingredient flex-small" id="item3" placeholder="ex. chicken"></textarea>
 
-        <!--Select Item #5-->
-        <textarea class="ingredient" id="item5" placeholder="ex. eggs"></textarea>
+            <!--Select Item #4-->
+            <textarea class="ingredient flex-small" id="item4" placeholder="ex. dumplings"></textarea>
 
-    </div> <!--end of ingredient-selection class-->
+            <!--Select Item #5-->
+            <textarea class="ingredient" id="item5" placeholder="ex. eggs"></textarea>
 
-    <button class="submitBtn" type="submit" value="Submit" id="search-recipe">Submit</button>
-
-    <!--Recipe Suggestion title-->
-    <h4 id="suggestions-title">Suggested Recipes</h4>
-
-    <!--Recipe Suggestions container-->
-    <div class="suggestions-container">
-        <div class="recipe" id="recipe1">
-            <h4 class="recipe-titles"><a href="link-to-apple-pi-recipe.com/" target="_blank">Chicken Fajitas</a></h4>
-            <ul class="recipe-ingredients">
-                <li>Chicken</li>
-                <li>Peppers</li>
-                <li>Onions</li>
-                <li>Tortillas</li>
-            </ul>
         </div>
+        <!--end of ingredient-selection class-->
 
-        <div class="recipe" id="recipe2">
-            <h4 class="recipe-titles"><a href="link-to-apple-pi-recipe.com/" target="_blank">Apple Pie</a></h4>
-            <ul class="recipe-ingredients">
-                <li>Flour</li>
-                <li>Apples</li>
-                <li>Sugar</li>
-                <li>Cinnamon</li>
-            </ul>
+        <button class="submitBtn" type="submit" value="Submit" id="search-recipe">Submit</button>
 
-        </div> <!--end of recipe class-->
+        <!--Recipe Suggestion title-->
+        <h4 id="suggestions-title">Suggested Recipes</h4>
 
-    </div> <!--end of recipe suggestions container-->
+        <!--Recipe Suggestions container-->
+        <div class="suggestions-container" id="recipeCards">
+            
+        </div>
+        <!--end of recipe suggestions container-->
 
-
-    </div> <!--end of Container-->
+    </div>
+    <!--end of Container-->
 
     <!-- link to the jQuery Library & script file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/app.js"></script>
-    
+
 </body>
 
 </html>

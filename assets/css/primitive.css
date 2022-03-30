@@ -1,5 +1,4 @@
-/*! 
- * Primitive UI | MIT License
+/* Primitive UI | MIT License
  *
  * A minimalist front-end design toolkit built with Sass for developing 
  * responsive, browser-consistent web apps.
@@ -29,13 +28,6 @@ html {
 
 /* Sections
    ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
-  margin: 0;
-}
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -376,10 +368,12 @@ html {
   font-size: 1rem;
 }
 
+/* No margin in all browswers */
 body {
   color: #404040;
   background: white;
   font-size: 1rem;
+  margin: 0;
 }
 
 p,
@@ -784,7 +778,7 @@ dd {
   border: 1px solid #0366ee;
   border-radius: 4px;
   background: #0366ee;
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
