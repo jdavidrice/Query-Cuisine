@@ -7,12 +7,12 @@ var item5 = $('#item5').val().trim();
 
 var ingredientList = [];
 
-// console.log(ingredientList);
-
 // Setup API key
 var APIKey = 'cadebde4223d47aba1fca1df13e51294';
 // var APIKey = "2f3e7f513e714122ada8fe2295969951"; Cris's key
 var queryURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKey}&ingredients=${ingredientList}&number=2`;
+
+var ingredientTemp = [item1, item2, item3, item4, item5];
 
 // Function to get recipe using the ingredients ingredientList
 function getRecipe() {
@@ -70,20 +70,17 @@ function getInstructions(recipeId, recipeDiv) {
   }).then(function (instructions) {
 
     if (instructions == 0) {
-      console.log("no instructions");
       recipeDiv.append('<h5>Specific cooking instructions have not been provided for this recipe. Use your best judgment regarding mixing all of the ingredients together, and applying heat to the food.</h5>');
     } else {
-      console.log("instructions present")
         
-        var olEl = $("<ol id='problem'>");
+        var olElement = $("<ol id='instructionElement'>");
         
         for (let j = 0; j < instructions[0].steps.length; j++) {
-          var problem = $('<li>');
-          problem.text(instructions[0].steps[j].step);
-          olEl.append(problem);
+          var instructionElement = $('<li>');
+          instructionElement.text(instructions[0].steps[j].step);
+          olElement.append(instructionElement);
         }
-        
-        recipeDiv.append(olEl);
+        recipeDiv.append(olElement);
       }
     }
   )
@@ -96,7 +93,7 @@ $('#search-recipe').click(function () {
   item3 = $('#item3').val().trim();
   item4 = $('#item4').val().trim();
   item5 = $('#item5').val().trim();
-  var ingredientTemp = [item1, item2, item3, item4, item5];
+  ingredientTemp = [item1, item2, item3, item4, item5];
 
   // loop through ingredientTemp, if ingredient entered add to ingredientList array
   for (let i = 0; i <= 4; i++) {
@@ -118,4 +115,6 @@ $('#reset').click(function () {
   item3 = $('#item3').val('');
   item4 = $('#item4').val('');
   item5 = $('#item5').val('');
+  ingredientList = [];
 });
+
