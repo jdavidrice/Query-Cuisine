@@ -69,21 +69,24 @@ function getInstructions(recipeId, recipeDiv) {
     method: 'GET'
   }).then(function (instructions) {
 
-    if (instructions == null) {
+    if (instructions == 0) {
       console.log("no instructions");
+      recipeDiv.append('<h5>Specific cooking instructions have not been provided for this recipe. Use your best judgment regarding mixing all of the ingredients together, and applying heat to the food.</h5>');
     } else {
       console.log("instructions present")
-      var olEl = $("<ol id='problem'>");
-
-      for (let j = 0; j < instructions[0].steps.length; j++) {
-        var problem = $('<li>');
-        problem.text(instructions[0].steps[j].step);
-        olEl.append(problem);
+        
+        var olEl = $("<ol id='problem'>");
+        
+        for (let j = 0; j < instructions[0].steps.length; j++) {
+          var problem = $('<li>');
+          problem.text(instructions[0].steps[j].step);
+          olEl.append(problem);
+        }
+        
+        recipeDiv.append(olEl);
       }
-
-      recipeDiv.append(olEl);
     }
-  });
+  )
 } // end of getInstructions function
 
 // Submit button clicked, what happens each time
@@ -106,4 +109,13 @@ $('#search-recipe').click(function () {
 
   // getRecipe each time click submit button
   getRecipe();
+
+});
+
+$('#reset').click(function () {
+  item1 = $('#item1').val('');
+  item2 = $('#item2').val('');
+  item3 = $('#item3').val('');
+  item4 = $('#item4').val('');
+  item5 = $('#item5').val('');
 });

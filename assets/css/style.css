@@ -20,6 +20,12 @@ h1 {
 
 }
 
+h5 {
+  font-size: 20px;
+  font-family: 'Source Serif Pro', Helvetica, serif;
+  text-align: center;
+}
+
 /* recipe titles */
 h4 {
   font-size: 30px;
